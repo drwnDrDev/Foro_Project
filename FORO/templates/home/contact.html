@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            margin: 0;
+        }
+        p {
+            padding: 10px;
+        }
+        header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            background-color: #333;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+        main {
+            display: flex;
+            justify-content: space-around;
+        }
+        main section {
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            width: 30%;
+        }
+    </style>
+
+    <title>{{title}}</title>
+</head>
+<body>
+    <header>
+        <h1>{{title}}</h1>
+        <nav>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/about">Acerca de</a></li>
+                <li><a href="/contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Contact</h1>
+    <p>{{message}}</p>
+    <main>
+        <section>
+            <h2>Información de contacto</h2>
+            <p>Correo: {{darwin.email}}</p>
+            <p>Teléfono: {{darwin.phone}}</p>
+        </section>
+        <section>
+            <h2>Información de contacto</h2>
+            <p>Correo: {{carlos.email}}</p>
+            <p>Teléfono: {{carlos.phone}}</p>
+        </section>
+
+
+</body>
