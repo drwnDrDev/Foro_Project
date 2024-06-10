@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang ='es'>
 <head>
     <meta charset="utf-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% block description %}  {% endblock %}">
     {% load static %}
     <link rel="stylesheet" href="{% static 'home/style.css' %}">  
-    <title>Thereads APP</title>
+    <title>{% block title%}   {% endblock %}</title>
 </head>
 <body>
     <header>
-    <h1>Threads APP</h1>
+    <h1>Thereads APP</h1>
     <nav>
         <ul>
             <li><a href="/">Inicio</a></li>
