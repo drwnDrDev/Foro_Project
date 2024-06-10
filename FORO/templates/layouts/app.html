@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">  
+    <title>Thereads APP</title>
+</head>
+<body>
+    <header>
+    <h1>Threads APP</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/about">Acerca de</a></li>
+            <li><a href="/contact">Contacto</a></li>
+        </ul>   
+    </nav>
+    </header>
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </body>
+</html>

@@ -61,7 +61,7 @@
             width: 30%;
         }
     </style>
-
+    {% load static %}
     <title>{{title}}</title>
 </head>
 <body>
@@ -88,6 +88,6 @@
             <p>Correo: {{carlos.email}}</p>
             <p>Teléfono: {{carlos.phone}}</p>
         </section>
-
+        <img src="{% static '/home/Classes.jpg' %}" alt="Threads APP">
 
 </body>
