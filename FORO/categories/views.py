@@ -3,4 +3,5 @@ from django.http import HttpResponse
 
 # Create your views here.
 def categories(request):
-    return HttpResponse("Categories page")
+
+    return render(request,"categories.html")
