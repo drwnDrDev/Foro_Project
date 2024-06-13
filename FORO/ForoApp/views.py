@@ -2,14 +2,12 @@ from django.shortcuts import render
 from datetime import datetime
 
 # Create your views here.
-
 def home(request):
-
     if datetime.now().hour < 12:
         jornada = "am"
     else:
         jornada = "pm"
-    context={"jornada":jornada}
+    context = {"jornada":jornada}
     return render(request,'home/index.html',context)
 
 def contact(request):
