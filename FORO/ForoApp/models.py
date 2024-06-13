@@ -31,3 +31,14 @@ class Post(models.Model):
     def __str__(self):
         return f'Usuario: {self.user}, Post en: {self.created_at}'
 
+class Votes(models.Model):
+    TYPE_CHOICE= {
+        ("CO", "Confirmo"),
+        ("NO", "No me parece"),
+    }
+    vote_type = models.CharField(max_length=20, choices=TYPE_CHOICE)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f'Voto: {self.user} Type: {self.vote_type}'
