@@ -16,14 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from categories.views import categories
-from home.views import *
-from users.views import *
-from votes.views import *
-from threads.views import *
-from tags.views import *
 from django.contrib.auth.views import LoginView, LogoutView
 from django.conf import settings
+from FORO.ForoApp.views import *
 from django.conf.urls.static import static
 
 
@@ -37,9 +32,6 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name='logout'),
     path('votes/', votes, name='vote'),
     path('tags/', tags, name='tags'),
-  
-    path('threads/', threads, name='threads'),
-    path('thread/<int:id>/', thread, name='thread'),
 
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
