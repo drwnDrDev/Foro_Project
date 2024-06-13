@@ -1,0 +1,57 @@
+:root {
+    --primary-color: hsl(186, 100%, 14%);
+    --secondary-color: hsl(186, 94%, 42%);
+    --tertiary-color: hsl(276, 100%, 14%); /* Color complementario */
+    --accent-color: hsl(186, 50%, 80%); /* Tono más claro del color primario */
+  }
+html{
+    font-family: "Fira Sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    padding: 0;
+    margin: 0;
+}
+.form__login {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+
+body {
+    background-color: blueviolet;
+}
+main {
+ width: 100%;
+ margin: 1rem auto;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ padding: 1rem;
+}
+.section__brand {
+    width: 48%;
+}
+.section__login  {
+    width: 48%;
+}
+.section__login form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+}
+input {
+    height: 2rem;
+    border-radius: 3%;
+}
+h2 {
+    text-align: center;
+    color: var(--primary-color);
+}

@@ -5,8 +5,29 @@
 {% block description %}Bienvenitos a Thereads idea original de Darwin Diaz y Carlos Ramiriez{% endblock %}
 {% load static %}
 {% block content %}
-    <main class={{jornada}}>
-    <p>La aplicacion de hilos que remplazara a Twitter,True y Thereads</p>
-    <img src="{% static 'home/Classes.jpg' %}" alt="Threads APP">
-    </main>
+    <main class="main">
+    <section class="section__brand">
+            
+        <p>La aplicacion de hilos que remplazara a Twitter,True y Thereads</p>
+           <div class="brand">
+            <img src="{% static 'img/dc.svg' %}" alt="Threads APP">
+            <h2>DC programs</h2>
+            </div>  
+            <p>Threads APP es una aplicacion de hilos que remplazara a Twitter,True y Thereads</p>
+     </section>
+     <section class="section__login">
+        <form method="POST" novalidate>
+            {% csrf_token %}
+            <h2>Login</h2>
+            <form action="#" class="section__login form">
+                <div class="form__login">
+                    <label for="username">username: </label><input type="text" name="username" id="username"> 
+                    <label for="password">password:</label> <input type="password" name="password" id="username">
+                </div>
+            </form>
+            <input type="submit" value="Login" />
+        </form>
+
+     </section>
+ </main>
 {% endblock %}
