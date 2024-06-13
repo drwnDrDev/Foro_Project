@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ImageThreadsConfig(AppConfig):
+class ForoappConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'image_threads'
+    name = 'ForoApp'
