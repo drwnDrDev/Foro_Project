@@ -3,6 +3,7 @@
     --secondary-color: hsl(186, 94%, 42%);
     --tertiary-color: hsl(276, 100%, 14%); /* Color complementario */
     --accent-color: hsl(186, 50%, 80%); /* Tono más claro del color primario */
+    --background-dark:rgb(33, 33, 33);
   }
 html{
     font-family: "Fira Sans", sans-serif;
@@ -11,32 +12,27 @@ html{
     padding: 0;
     margin: 0;
 }
-.form__login {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding: 1rem;
-}
-
-
 body {
-    background-color: blueviolet;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-dark);
+    max-width: 100%;
 }
 main {
  width: 100%;
- margin: 1rem auto;
  display: flex;
  flex-wrap: wrap;
  justify-content: space-around;
  padding: 1rem;
 }
 .section__brand {
+    display: none;
     width: 48%;
 }
 .section__login  {
-    width: 48%;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
 }
 .section__login form{
     display: flex;
@@ -49,22 +45,71 @@ main {
 }
 input {
     height: 2rem;
-    border-radius: 3%;
+    border-radius: 0.5rem;
+}
+.form__login {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
 }
 .form__login--right{
-    columns: 2;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: end;
+    padding: auto 6rem;
+    justify-content: right;
 }
-nav ul{
+header {
+    color: var(--secondary-color);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
+    background-color: var(--primary-color);
+
 }
 
-h2 {
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around; 
+ 
+}
+nav li{
+    list-style:  none;
+}
+nav a { 
+    padding: 0.8rem;
+    background-color: var(--secondary-color);
+    text-decoration: none;
+
+}
+nav a:hover {
+
+    background-color: var(--accent-color);
+    
+}
+
+
+
+.section__brand h2 {
+    margin: auto 0;
     text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: xx-large;
     color: var(--primary-color);
+}
+
+.section__login h2 {
+    text-align: center;
+    padding: 1rem;
+    color: var(--primary-color);
+    opacity: 0.85;
 }
 .button-primary {
     background-color: var(--primary-color);
@@ -75,4 +120,42 @@ h2 {
     height: 3rem;
     padding: 1rem;
     border-radius: 1rem;
+}
+.button-primary p{
+    text-wrap: pretty;
+}
+.button-primary:hover{
+    background-color: var(--tertiary-color);
+}
+
+@media (min-width: 640px){
+    main {
+        background-image: url(../img/01.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .section__brand {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 44%;
+        padding: 2rem;
+        border-radius: 1rem;
+        background-color:var(--primary-color);
+    }
+    .section__login  {
+        width:min(320px, 48%);
+        display: flex;
+        border-radius: 2rem;
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+    }
+}
+@media (prefers-color-scheme: light) {
+    body{
+        background-color: azure;
+    }
+    .section__brand {
+        background-color:var(--accent-color);
+    }
 }
