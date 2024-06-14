@@ -51,7 +51,28 @@ input {
     height: 2rem;
     border-radius: 3%;
 }
+.form__login--right{
+    columns: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+
 h2 {
     text-align: center;
     color: var(--primary-color);
+}
+.button-primary {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    max-width: 8rem;
+    height: 3rem;
+    padding: 1rem;
+    border-radius: 1rem;
 }
