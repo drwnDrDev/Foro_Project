@@ -47,6 +47,35 @@ input {
     height: 2rem;
     border-radius: 0.5rem;
 }
+textarea {
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+.form__create{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    margin: auto;
+}
+.textarea {
+    padding: 1rem;
+    width: 600px;
+    max-width: 100%;
+    font-weight: 400;
+    font-size: large;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+  }
+  
+.create__label {
+    display: block;
+    font-size: xx-large;
+    padding: 2rem;
+    margin:auto 1rem;
+  }
+  
 .form__login {
     display: grid;
     grid-template-columns: auto auto;
@@ -126,6 +155,10 @@ nav a:hover {
 }
 .button-primary:hover{
     background-color: var(--tertiary-color);
+}
+.create__buttom{
+ padding: 2rem;
+ filter: brightness(0.8);
 }
 
 @media (min-width: 640px){

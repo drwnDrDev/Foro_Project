@@ -16,3 +16,9 @@ def contact(request):
     return render(request,'home/contact.html',contex)
 def about(request):
     return render(request,'home/about.html')
+def threads_create(request):
+    return render(request,'threads/create.html',{"user":1})
+def threads(request):
+    return render(request,'threads/index.html',{"data":[{"id":1,"user":1,"title":"Realmetente son necesarios estos mockups","create_at":datetime.now(),"update_at":datetime.now()},{"id":3,"user":2,"title":"Un usuario puede escribir varios theads","create_at":datetime.now(),"update_at":datetime.now()},{"id":2,"user":1,"title":"Las fechas interactuan con la vista o solo con el moedlo","create_at":datetime.now(),"update_at":datetime.now()}]})
+def threads_show(request):
+    return render(request,'threads/show.html',{"id":1,"user":1,"title":"Realmetente son necesarios estos mockups","create_at":datetime.now(),"update_at":datetime.now()})
