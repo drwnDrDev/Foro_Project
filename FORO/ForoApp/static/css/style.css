@@ -55,6 +55,7 @@ nav a:hover {
     color: var(--secondary-color);
     font-weight: 600;
     text-transform: uppercase;
+    transition:  all 200ms,  color 400ms;
     max-width: 8rem;
     height: 3rem;
     padding: 1rem;
@@ -64,6 +65,7 @@ nav a:hover {
     text-wrap: pretty;
 }
 .button-primary:hover{
+    border-radius: 1.2rem;
     background-color: var(--tertiary-color);
 }
 .create__buttom{

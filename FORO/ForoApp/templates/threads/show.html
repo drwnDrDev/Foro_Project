@@ -1,0 +1,35 @@
+{% extends 'layouts/app.html'%}
+{% block title %}{{thread.title}}{% endblock %}
+{% block description %} {{thread.title}}  {% endblock %}
+{% block content %}
+<div class="description">
+    <p class="title nombre">Nombre del usuario{{ thread.user}}</p>
+    <p class="title fecha"> {{thread.create_at}}</p>
+</div>     
+
+<main>
+
+    {% for post in posts %}
+<div class="row">
+    <p class="row__p content">
+        {{post.content}}
+    </p>
+    <p class="row__p nombre">{{post.user}}</p>
+    <p class="row__p fecha">
+        {{post.create_at}}
+    </p>
+    <p class="row_p votes">
+       <b>{{confirmos}}</b><a href="">confirmo </a>
+    </p>
+    <p class="row_p votes">
+     <b>{{nomepareces}}</b><a href="">no me parece </a>
+    </p>
+
+</div>
+{% endfor%}
+
+
+{% endblock %}
+
+
+</main>
