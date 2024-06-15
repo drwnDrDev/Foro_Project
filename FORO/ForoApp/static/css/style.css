@@ -6,7 +6,7 @@
     --background-dark:rgb(33, 33, 33);
   }
 html{
-    font-family: "Fira Sans", sans-serif;
+    
     font-weight: 300;
     font-style: normal;
     padding: 0;
@@ -18,79 +18,7 @@ body {
     background-color: var(--background-dark);
     max-width: 100%;
 }
-main {
- width: 100%;
- display: flex;
- flex-wrap: wrap;
- justify-content: space-around;
- padding: 1rem;
-}
-.section__brand {
-    display: none;
-    width: 48%;
-}
-.section__login  {
-    padding: 1rem;
-    width: 100%;
-    display: flex;
-}
-.section__login form{
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-between;
-    gap: 1rem;
-    flex-direction: column;
-    justify-content: center;
-}
-input {
-    height: 2rem;
-    border-radius: 0.5rem;
-}
-textarea {
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-  }
-.form__create{
-    display: grid;
-    justify-content: center;
-    justify-items: center;
-    margin: auto;
-}
-.textarea {
-    padding: 1rem;
-    width: 600px;
-    max-width: 100%;
-    font-weight: 400;
-    font-size: large;
-    line-height: 1.5;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-shadow: 1px 1px 1px #999;
-  }
-  
-.create__label {
-    display: block;
-    font-size: xx-large;
-    padding: 2rem;
-    margin:auto 1rem;
-  }
-  
-.form__login {
-    display: grid;
-    grid-template-columns: auto auto;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    padding: 1rem;
-}
-.form__login--right{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: auto 6rem;
-    justify-content: right;
-}
+
 header {
     color: var(--secondary-color);
     display: flex;
@@ -100,7 +28,6 @@ header {
     background-color: var(--primary-color);
 
 }
-
 
 nav ul {
     display: flex;
@@ -114,32 +41,15 @@ nav li{
 }
 nav a { 
     padding: 0.8rem;
+    border-radius: 1rem;
+    border: 1px solid var(--primary-color);
     background-color: var(--secondary-color);
     text-decoration: none;
-
 }
 nav a:hover {
-
-    background-color: var(--accent-color);
-    
+    background-color: var(--accent-color);   
 }
 
-
-
-.section__brand h2 {
-    margin: auto 0;
-    text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: xx-large;
-    color: var(--primary-color);
-}
-
-.section__login h2 {
-    text-align: center;
-    padding: 1rem;
-    color: var(--primary-color);
-    opacity: 0.85;
-}
 .button-primary {
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -162,33 +72,11 @@ nav a:hover {
 }
 
 @media (min-width: 640px){
-    main {
-        background-image: url(../img/01.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    .section__brand {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 44%;
-        padding: 2rem;
-        border-radius: 1rem;
-        background-color:var(--primary-color);
-    }
-    .section__login  {
-        width:min(320px, 48%);
-        display: flex;
-        border-radius: 2rem;
-        background-color: var(--secondary-color);
-        color: var(--primary-color);
-    }
+
 }
 @media (prefers-color-scheme: light) {
     body{
         background-color: azure;
     }
-    .section__brand {
-        background-color:var(--accent-color);
-    }
+
 }

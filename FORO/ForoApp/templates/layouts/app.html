@@ -3,8 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% block description %} {% endblock %}">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'home/style.css' %}">  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/dc.png' %}" type="image/png">  
     <title>Thereads APP</title>
 </head>
 <body>
@@ -12,13 +15,17 @@
     <h1>Threads APP</h1>
     <nav>
         <ul>
-            <li><a href="/threads">Inicio</a></li>
-            <li><a href="/tags">Etiquetas</a></li>
-            <li><a href="/categories">Categorias</a></li>
-            <li><a href="/votes">Lo más votado</a></li>
+            <li><a href="/threads">Home</a></li>
+            <li><a href="/user">Mi perfil</a></li>
+            <li><a href="/votes">Popular</a></li>
         </ul>   
     </nav>
+    <form class='as_div'>
+        <input type="text" class="input__text-buscar" name="search" placeholder="Buscar">
+        <button type="submit" class="button-primary">Buscar</button>
+    </form>
     </header>
+    <h1>{% block title %} {% endblock %}</h1>
     <main>
         {% block content %}
 
