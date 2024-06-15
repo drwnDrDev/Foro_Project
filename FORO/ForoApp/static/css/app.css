@@ -119,6 +119,22 @@ nav a:hover {
     border-radius: 5px;
 
   }
+.thread__h2 {
+    margin-bottom: 0;
+}
+.thread__div {
+    margin-top: -1rem;
+    font-size: smaller;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+
+}
+.thread__div--p{
+    display: flex;
+    gap: 0.1rem;
+    font-size: smaller;
+}
 .row {
     text-decoration: none;
     padding: 1rem;
@@ -146,7 +162,38 @@ nav a:hover {
 .cabecera{
     display: none;
 }
-  
+.post {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    padding: 1rem;
+    margin:1rem auto;
+    background-color: rgba(100, 100, 100, 0.2);
+}
+.content {
+    padding: 0.8rem;
+    font-size: large;
+    grid-column: 1/ span 4;
+
+} 
+
+.votes{
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: small;
+}
+
+.post__p--a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fecha {
+    font-size: small;
+    display: flex;
+}
 @media (min-width: 640px){
 .row {
     grid-template-columns:4fr 1fr 1fr;
@@ -158,7 +205,22 @@ nav a:hover {
     display: grid;
     grid-template-columns:4fr 1fr 1fr;
 }
-  
+.post {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    padding: 1rem;
+    margin:0 auto;
+} 
+.post__p {
+    margin-top: -0.5rem;
+    width: 100%;
+    display: flex;
+    opacity: 0.89;
+    flex-wrap: wrap;
+    font-size: smaller;
+    gap: 1px;
+}
 }
 @media (prefers-color-scheme: light) {
     body{

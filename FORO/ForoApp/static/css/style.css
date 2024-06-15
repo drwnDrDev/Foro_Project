@@ -1,21 +1,26 @@
 :root {
     --primary-color: hsl(186, 100%, 14%);
     --secondary-color: hsl(186, 94%, 42%);
-    --tertiary-color: hsl(276, 100%, 14%); /* Color complementario */
-    --accent-color: hsl(186, 50%, 80%); /* Tono más claro del color primario */
-    --background-dark:rgb(33, 33, 33);
-  }
-html{
-    
+    --tertiary-color: hsl(276, 100%, 14%);
+    /* Color complementario */
+    --accent-color: hsl(186, 50%, 80%);
+    /* Tono más claro del color primario */
+    --background-dark: rgb(33, 33, 33);
+}
+
+html {
+
     font-weight: 300;
     font-style: normal;
     padding: 0;
     margin: 0;
 }
+
 body {
     margin: 0;
     padding: 0;
     background-color: var(--background-dark);
+    color: var(--accent-color);
     max-width: 100%;
 }
 
@@ -33,21 +38,37 @@ nav ul {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    justify-content: space-around; 
- 
+    justify-content: space-around;
+
 }
-nav li{
-    list-style:  none;
+
+nav li {
+    list-style: none;
+
+
 }
-nav a { 
+
+nav a {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
     padding: 0.8rem;
     border-radius: 1rem;
     border: 1px solid var(--primary-color);
     background-color: var(--secondary-color);
     text-decoration: none;
 }
+
 nav a:hover {
-    background-color: var(--accent-color);   
+    background-color: var(--accent-color);
+}
+.brand {
+    color: var(--secondary-color);
+}
+h1,h2 {
+    padding: 1rem;
+    text-align: center;
+    color: var(--accent-color);
 }
 
 .button-primary {
@@ -55,30 +76,70 @@ nav a:hover {
     color: var(--secondary-color);
     font-weight: 600;
     text-transform: uppercase;
-    transition:  all 200ms,  color 400ms;
+    transition: all 200ms, color 400ms;
     max-width: 8rem;
     height: 3rem;
     padding: 1rem;
     border-radius: 1rem;
 }
-.button-primary p{
+
+.button-primary p {
     text-wrap: pretty;
 }
-.button-primary:hover{
+
+.button-primary:hover {
     border-radius: 1.2rem;
     background-color: var(--tertiary-color);
 }
-.create__buttom{
- padding: 2rem;
- filter: brightness(0.8);
+
+.create__buttom {
+    padding: 2rem;
+    filter: brightness(0.8);
 }
 
-@media (min-width: 640px){
-
+.icon {
+    display: block; 
+    padding: 0.2em;  
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    
 }
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+}
+.icon svg {
+    color: currentColor;
+}
+.i-home{
+    background-image: url('../img/home.svg');  
+}
+.i-user {
+    background-image: url('../img/user.svg');  
+}
+.i-show {
+    background-image: url('../img/ver.svg');  
+}
+.i-time {
+    background-image: url('../img/time.svg'); 
+}
+.i-like {
+    background-image: url('../img/rana.svg'); 
+}
+.i-unlike{
+     background-image: url('../img/OUT.svg');
+ }
+@media (min-width: 640px) {}
+
 @media (prefers-color-scheme: light) {
-    body{
+    body {
         background-color: azure;
+        color: black;
+    }
+    h1,h2{
+        color: darkslategray;
     }
 
 }
