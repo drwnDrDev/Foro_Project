@@ -22,3 +22,7 @@ def threads(request):
     return render(request,'threads/index.html',{"data":[{"id":1,"user":1,"title":"Realmetente son necesarios estos mockups","create_at":datetime.now(),"update_at":datetime.now()},{"id":3,"user":2,"title":"Un usuario puede escribir varios theads","create_at":datetime.now(),"update_at":datetime.now()},{"id":2,"user":1,"title":"Las fechas interactuan con la vista o solo con el moedlo","create_at":datetime.now(),"update_at":datetime.now()}]})
 def threads_show(request):
     return render(request,'threads/show.html',{"thread":{"id":1,"user":1,"title":"Realmetente son necesarios estos mockups","create_at":datetime.now(),"update_at":datetime.now()},"posts":[{"content":"Es realmente una perdida de tiempo en tareas poco productivas","user":1,"thread":1,"create_at":datetime.now(),"update_at":datetime.now()},{"content":"No, se pueden traer datos de prueba desde los kodelos i desde la base de datos de prueba","user":2,"thread":1,"create_at":datetime.now(),"update_at":datetime.now()} ]})
+def threads_reply(request):
+    return render(request,'threads/reply.html',{"thread":1})
+def profile(request,user):    
+    return render(request,'profile/index.html',{"user":{"id":1,"username":"Juanito Alimaña","email":"juanito123@example.com","create_at":datetime.now(),"update_at":datetime.now()}})

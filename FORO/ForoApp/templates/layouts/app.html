@@ -16,7 +16,7 @@
     <nav>
         <ul>
             <li><a href="/threads"><i class="icon i-home" aria-label="Home"></i> Home</a></li>
-            <li ><a href="/user"><i class="icon i-user" aria-label="user"></i>Mi perfil</a></li>
+            <li ><a href="/profile/1"><i class="icon i-user" aria-label="user"></i>Mi perfil</a></li>
             <li ><a href="/votes"><i class="icon i-show" aria-label="show"></i>Popular</a></li>
         </ul>   
     </nav>
@@ -26,9 +26,13 @@
     </form>
     </header>
     <h1>{% block title %} {% endblock %}</h1>
-    <main>
+   
         {% block content %}
 
         {% endblock %}
+
+    <footer>    
+        <p>Desarrolladores <a href="https://github.com/drwnDrDev">Darwin Diaz</a><a href="https://github.com/FotoAleph">Carlos ramirez</a></p>  
+    </footer>
     </body>
 </html>

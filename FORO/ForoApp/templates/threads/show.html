@@ -15,12 +15,12 @@
 
     {% for post in posts %}
 <div class="post">
+    <p class="post__p nombre"><i class="icon i-user"></i> nobre de usuario {{post.user}}</p>
+    <p class="post__p fecha">
+        <b class="icon i-time"></b><i>{{post.create_at}}</i>
+    </p> 
     <p class="post__p content">
         {{post.content}}
-    </p>
-    <p class="post__p nombre">nobre de usuario {{post.user}}</p>
-    <p class="post__p fecha">
-        <i class="icon i-time"></i><b>{{post.create_at}}</b>
     </p>
     <p class="post_p votes">
        <b>{{confirmos}}</b>
@@ -38,6 +38,5 @@
 
 
 {% endblock %}
-
 
 </main>

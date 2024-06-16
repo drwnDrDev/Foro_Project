@@ -70,7 +70,25 @@ header {
     background-color: var(--primary-color);
 
 }
+footer{
+    position: relative;
+    bottom: 1rem;
+}
 
+footer p{
+    color: #797878;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 620px;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}	
+footer p a{
+text-decoration: none;
+color: #767676;
+}	
 
 nav ul {
     display: flex;
@@ -110,7 +128,10 @@ nav a:hover {
  padding: 2rem;
  filter: brightness(0.8);
 }
-
+.nombre {
+display: flex;
+gap: 0.5rem;
+}
 .input__text-buscar {
     padding: 1rem;
     width: 8rem;
@@ -164,17 +185,19 @@ nav a:hover {
 }
 .post {
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    width: 100%;
-    padding: 1rem;
+    grid-template-columns: auto auto;
+    width: 88%;
+    padding: 0.2rem;
     margin:1rem auto;
+    border-radius: 1rem;
     background-color: rgba(100, 100, 100, 0.2);
 }
 .content {
     padding: 0.8rem;
-    font-size: large;
-    grid-column: 1/ span 4;
-
+    width: 88%;
+    font-size: x-large;
+    font-weight: bold;
+    grid-column: 1/ span 2;
 } 
 
 .votes{
@@ -207,10 +230,10 @@ nav a:hover {
 }
 .post {
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    width: 100%;
+    grid-template-columns: auto auto;
+    width: min(620px,92%);
     padding: 1rem;
-    margin:0 auto;
+    margin: auto 1;
 } 
 .post__p {
     margin-top: -0.5rem;

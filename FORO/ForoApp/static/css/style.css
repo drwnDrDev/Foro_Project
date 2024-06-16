@@ -9,7 +9,7 @@
 }
 
 html {
-
+    max-width: 100%;
     font-weight: 300;
     font-style: normal;
     padding: 0;
