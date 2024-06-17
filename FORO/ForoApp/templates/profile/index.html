@@ -18,11 +18,11 @@
 </section>
 <aside>
     <h3>Últimos hilos</h3>
-    <ul>
+  
         {% for thread in threads %}
-        <li><a href="/threads/{{thread.id}}">{{thread.title}}</a></li>
+        <a href="/threads/{{thread.id}}">{{thread.title}}</a>
         {% endfor %}
-    </ul>
+  
 </aside>
 
 {%endblock%}
