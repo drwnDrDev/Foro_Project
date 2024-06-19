@@ -62,7 +62,7 @@ nav a {
 nav a:hover {
     background-color: var(--accent-color);
 }
-.brand {
+.header__brand {
     color: var(--secondary-color);
 }
 h1,h2 {
@@ -131,7 +131,30 @@ h1,h2 {
 .i-unlike{
      background-image: url('../img/OUT.svg');
  }
-@media (min-width: 640px) {}
+ .i-open {
+    background-image: url('../img/menu.svg');
+    background-color: var(--accent-color);
+    color: blueviolet;
+ }
+ .i-close {
+    background-image: url('../img/menu2.svg');
+ }
+ .i-register {
+    background-image: url('../img/wilson.svg');
+ }
+ .i-sesion {
+    background-image: url('../img/user.svg');
+ }
+
+.pop-up {
+    display: none;
+}
+
+
+@media (min-width: 640px) {
+
+
+}
 
 @media (prefers-color-scheme: light) {
     body {
