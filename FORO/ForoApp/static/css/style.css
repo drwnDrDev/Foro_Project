@@ -3,7 +3,7 @@
     --secondary-color: hsl(186, 94%, 42%);
     --tertiary-color: hsl(276, 100%, 14%);
     /* Color complementario */
-    --accent-color: hsl(186, 50%, 80%);
+    --accent-color: #b3e0e6;
     /* Tono más claro del color primario */
     --background-dark: rgb(33, 33, 33);
 }
@@ -98,11 +98,14 @@ h1,h2 {
 }
 
 .icon {
+ 
     display: block; 
     padding: 0.2em;  
-    width: 1em;
-    height: 1em;
+    width: 1.2em;
+    height: 1.2em;
     background-repeat: no-repeat;
+    color: aquamarine;
+    fill-rule: evenodd;
     
 }
 .flex {
@@ -110,8 +113,9 @@ h1,h2 {
     flex-wrap: wrap;
     gap: 0.2rem;
 }
-.icon svg {
-    color: currentColor;
+
+.icon:hover{
+    filter: contrast(200%);
 }
 .i-home{
     background-image: url('../img/home.svg');  
