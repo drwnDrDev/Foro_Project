@@ -1,11 +1,13 @@
 :root {
-    --primary-color: hsl(186, 100%, 14%);
-    --secondary-color: hsl(186, 94%, 42%);
-    --tertiary-color: hsl(276, 100%, 14%);
-    /* Color complementario */
-    --accent-color: #b3e0e6;
+    --primary-color: hsl(56, 79%, 11%);
     /* Tono más claro del color primario */
+    --secondary-color:hsl(64, 38%, 78%); 
+    --tertiary-color: hsl(67, 9%, 64%);
+    /* Color complementario */
+    --accent-color: hsl(154, 14%, 65%);
+
     --background-dark: rgb(33, 33, 33);
+    --alternative:hsl(59, 89%, 43%);
 }
 
 html {
@@ -66,7 +68,6 @@ nav a:hover {
     color: var(--secondary-color);
 }
 h1,h2 {
-    padding: 1rem;
     text-align: center;
     color: var(--accent-color);
 }
