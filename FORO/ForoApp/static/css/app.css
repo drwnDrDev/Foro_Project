@@ -42,6 +42,9 @@ header {
 
 }
 
+.enviar{
+    justify-content: end;
+}
 
 nav ul {
     display: flex;
@@ -234,11 +237,7 @@ nav a:hover {
     display: flex;
 }
 
-.profile{
-    max-width: 100%;
-    width: min(96%,600px);
-    padding: 3rem;
-}
+
 .flex{
     padding: 2%;
     display: flex;
@@ -247,8 +246,55 @@ nav a:hover {
 }
 .historia {
     padding: 1rem;
-    width: min(600px,88%);
+    width: min(800px,88%);
     margin: auto;
+}
+
+.form__create--input{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+
+.profile{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 100%;
+    width: min(100%,600px);
+    padding: 0.3rem;
+}
+
+.form__create--input{
+    width: 100%;
+}
+.item-link {
+    display: flex;
+    gap: 0.2rem;
+    text-decoration: none;
+    padding: 2%;
+    color: var(--primary-color);
+}
+.item-link:hover {
+    color: var(--alternative);
+}
+.enviar{
+    position: relative;
+    right: 2%;
+    justify-content: end;
+
+}
+
+.profile__div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 2rem;
+}
+.dorado {
+    grid-column: 1 / span 2;
 }
 
 @media (min-width: 640px){
@@ -288,10 +334,42 @@ nav a:hover {
     display: grid;
     grid-template-columns: 4fr 3fr;
     justify-content: center;
-    gap: 2;
+    gap: 2rem;
 
 }
+.profile__div{
+    width: min(40%,480px);
+}
 
+.thread__div .nombre {
+    justify-content: center;
+}
+
+.form__create--input{
+    display: flex;
+    flex-wrap: wrap;
+    width: 480px;
+    justify-content: space-between;
+}
+.enviar{
+    position: relative;
+    right: 2%;
+    justify-content: end;
+
+}
+.dorado {
+    width: 300px;
+    height: 360px;
+    background-image: url('../img/sol.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+.profile{
+
+    width: min(50%,600px);
+    padding: 0.3rem;
+}
 
 }
 @media (prefers-color-scheme: light) {

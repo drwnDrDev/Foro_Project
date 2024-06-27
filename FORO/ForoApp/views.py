@@ -26,3 +26,9 @@ def threads_reply(request):
     return render(request,'threads/reply.html',{"thread":1})
 def profile(request,user):    
     return render(request,'profile/index.html',{"user":{"id":1,"username":"Juanito Alimaña","email":"juanito123@example.com","create_at":datetime.now(),"update_at":datetime.now()}})
+def profile_new(request):
+    return render(request,'profile/create.html',{})
+def profile_edit(request,user):
+    return render(request,'profile/edit.html',{})
+def profile_delete(request,user):
+    return render(request,'profile/delete.html',{})
