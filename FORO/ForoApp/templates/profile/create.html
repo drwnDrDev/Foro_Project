@@ -6,25 +6,34 @@
 
     <form class="profile">
 
-        <label class="form__create--input"for="nombre">Nombres <input type="text" id="nombre" name="nombre"></label>
-        <label class="form__create--input" for="apelllidos">Apellidos <input type="text"id="apelllidos" name="apelllidos"></label>
-        <label class="form__create--input" for="username">Nombre de usuario <input type="text" id="username" name="username"></label>
+        <label class="form__create--input" for="nombre">Nombres <input type="text" id="nombre" name="nombre"></label>
+        <label class="form__create--input" for="apelllidos">Apellidos <input type="text" id="apelllidos"
+                name="apelllidos"></label>
+        <label class="form__create--input" for="username">Nombre de usuario <input type="text" id="username"
+                name="username"></label>
         <label class="form__create--input" for="email">Correo: <input type="email" name="email" id="email"></label>
-        <label class="form__create--input" for="password">Contraseña <input type="password" name="password"  ></label>
-        <label class="form__create--input"for="r-password">Confirmar Constraseña <input type="password" name="r-password" > </label>
+        <label class="form__create--input" for="password">Contraseña <input type="password" name="password"
+                id="password"></label>
+        <label class="form__create--input" for="r-password">Confirmar Constraseña <input type="password"
+                name="r-password" id="r-password"> </label>
         <div class="form__create--input enviar"><button type="submit" class="button-primary">Enviar</button></div>
-        
+
     </form>
     <div class="profile__div">
         <div class="dorado">
-            
+
         </div>
         <a href="/" class="item-link"><i class="icon i-register"></i> Inicio</a>
         <a href="/votes" class="item-link"><i class="icon i-close"></i> Volver</a>
     </div>
 </section>
 <aside class="historia">
-    Conforme a las disposiciones contenidas en la <b>Ley 1581 de 2012</b>, cumple con el tratamiento de datos personales, propendiendo por la seguridad y confidencialidad de los datos personales que se hayan obtenido y tratado en el marco de las actividades desarrolladas por la entidad.  Para más información, en el siguiente enlace podrá consultar la Política de Tratamiento y Protección de Datos Personales 
+    Conforme a las disposiciones contenidas en la <b>Ley 1581 de 2012</b>, cumple con el tratamiento de datos
+    personales, propendiendo por la seguridad y confidencialidad de los datos personales que se hayan obtenido y tratado
+    en el marco de las actividades desarrolladas por la entidad. Para más información, en el siguiente enlace podrá
+    consultar la Política de Tratamiento y Protección de Datos Personales
 </aside>
+{% load static %}
+<script src="{% static 'js/register.js' %}" type="text/javascript"></script>
 
 {%endblock%}

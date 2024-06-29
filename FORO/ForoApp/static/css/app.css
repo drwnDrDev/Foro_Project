@@ -296,6 +296,15 @@ nav a:hover {
 .dorado {
     grid-column: 1 / span 2;
 }
+.correct {
+    background-color: rgb(190, 255, 212);
+}
+.incorrect {
+    background-color: rgb(255, 190, 190);
+    color: red;
+    outline-style: dotted;
+    outline-color: red;
+}
 
 @media (min-width: 640px){
 .row {
