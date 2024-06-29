@@ -12,14 +12,14 @@ rPdws.addEventListener('keyup',()=>{
         rPdws.classList.add('incorrect')
     }
 })
-ver.addEventListener('click', ()=>{
-    if(rPdws.type==='password'){
-        ver.classList.remove('unseen')
-        ver.classList.add('show')
+ver.addEventListener('mousedown', ()=>{
         rPdws.type='text'
-    }else{
-        ver.classList.remove('show')
-        ver.classList.add('unseen')
-        rPdws.type='text'
-    }
-})
+        ver.classList.remove('i-unseen')
+        ver.classList.add('i-ver')       
+    })
+    
+ver.addEventListener('mouseup', ()=>{
+        rPdws.type='password'
+        ver.classList.remove('i-ver')
+        ver.classList.add('i-unseen')       
+    })

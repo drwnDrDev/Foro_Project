@@ -127,6 +127,29 @@ h1,h2 {
 .i-show {
     background-image: url('../img/ver.svg');  
 }
+.i-ver {
+    position: relative;
+    right: 1rem;
+    height: 1rem;
+    z-index: 100;
+    background-image: url('../img/ver.svg'); 
+    background-size: contain; 
+    padding: 1rem;
+
+    cursor: pointer;
+}
+.i-unseen{
+    position: relative;
+    right: 1rem;
+    padding: 1rem;
+
+    cursor: pointer;
+    height: 1rem;
+    z-index: 100;
+    background-image: url('../img/OUT.svg'); 
+    background-size: contain; 
+}
+
 .i-time {
     background-image: url('../img/time.svg'); 
 }
