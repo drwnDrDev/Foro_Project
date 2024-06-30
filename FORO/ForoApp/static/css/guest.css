@@ -53,6 +53,11 @@ main {
 input {
     height: 2rem;
     border-radius: 0.5rem;
+    outline-style: hidden;
+}
+input:focus {
+    outline-color:var(--alternative);
+    outline-style: outset;
 }
 
 .form__login {
@@ -62,6 +67,8 @@ input {
     align-items: center;
     gap: 2rem;
     padding: 1rem;
+    color: var(--secondary-color);
+
 }
 
 .form__login--right {
@@ -111,6 +118,9 @@ input {
     color: var(--primary-color);
 }
 
+.section__login  {
+    border-radius: 1rem;
+}
 .section__login h2 {
     text-align: center;
     padding: 1rem;
@@ -143,7 +153,6 @@ input {
         color: var(--primary-color);
         -webkit-backdrop-filter: blur(22px);
         backdrop-filter: blur(21px);
-
     }
     .menu {
         width: 16rem;

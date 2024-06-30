@@ -91,6 +91,7 @@ h1,h2 {
 .button-primary:hover {
     border-radius: 1.2rem;
     background-color: var(--tertiary-color);
+    color: var(--primary-color);
 }
 
 .create__buttom {

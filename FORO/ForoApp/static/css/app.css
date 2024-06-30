@@ -149,8 +149,12 @@ nav a:hover {
     max-width: 100%;
     font-weight: 400;
     border-radius: 5px;
-
   }
+  .input__text-buscar:focus {
+    outline-style: groove;
+    outline-color: var(--alternative)
+  }
+
 .thread__h2 {
     margin-bottom: 0;
 }
@@ -326,7 +330,8 @@ margin-bottom: -1.5rem;
     grid-template-columns:4fr 2fr 1fr;
 }
 .cabecera__titulo {
-    text-align: center;
+
+    width: min(620px,92%);
 }
 .post {
     display: grid;
@@ -345,9 +350,12 @@ margin-bottom: -1.5rem;
     gap: 1px;
 }
 .thread__div {
+    
     margin-top: -0.2rem;
     font-size: medium;
     display: grid;
+    width: min(620px,92%);
+    margin: auto;
     grid-template-columns: 4fr 3fr;
     justify-content: center;
     gap: 2rem;

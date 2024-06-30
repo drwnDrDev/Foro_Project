@@ -32,3 +32,7 @@ def profile_edit(request,user):
     return render(request,'profile/edit.html',{})
 def profile_delete(request,user):
     return render(request,'profile/delete.html',{})
+
+def politica_de_datos(request):
+    return render(request,'home/tratamiento_de_datos.html',{})
+
