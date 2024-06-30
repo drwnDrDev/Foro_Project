@@ -129,25 +129,26 @@ h1,h2 {
 }
 .i-ver {
     position: relative;
-    right: 1rem;
-    height: 1rem;
     z-index: 100;
+    left: 8.8rem;
+    bottom: 2rem;
     background-image: url('../img/ver.svg'); 
-    background-size: contain; 
-    padding: 1rem;
-
+    background-size:auto ; 
+    opacity: 0.5;
+    background-repeat: no-repeat;
     cursor: pointer;
 }
 .i-unseen{
     position: relative;
-    right: 1rem;
-    padding: 1rem;
-
+    left: 8.8rem;
+    bottom: 2rem;
+    
     cursor: pointer;
-    height: 1rem;
     z-index: 100;
+    width: 1rem;
     background-image: url('../img/OUT.svg'); 
     background-size: contain; 
+    opacity: 0.5;
 }
 
 .i-time {

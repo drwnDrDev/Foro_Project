@@ -257,7 +257,14 @@ nav a:hover {
     gap: 1rem;
 }
 
+.form__create--input input{
+ height: 2rem;
+ border-radius: 0.5rem;
+}
 
+.form__create--input .group{
+margin-bottom: -1.5rem;
+   }
 .profile{
     display: flex;
     flex-wrap: wrap;
