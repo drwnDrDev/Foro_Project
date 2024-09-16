@@ -1,0 +1,38 @@
+{% extends "layouts/app.html" %}
+{% block title %}Votos{% endblock %}
+{% block content %}
+        <section>
+        <h2>Vota por tu categoria favorita</h2>
+
+        <form method="POST" action="{% url 'votes:store' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                        <label for="category">Categoria</label>
+                        <select name="category" id="category">
+                        <option value="1">Programacion</option>
+                        <option value="2">Diseño</option>
+                        <option value="3">Marketing</option>
+                        <option value="4">Desarrollo personal</option>
+                        </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="button-primary">Votar</button>
+                </div>
+        </form>
+
+        {%for equipo in data%}
+        <div class="row">
+            <p>{{equipo.Club}}</p>
+        <p>{{equipo.PJ}}</p>
+        <p>{{equipo.PG}}</p>
+        <p>{{equipo.PE}}</p>
+        <p>{{equipo.PP}}</p>
+        <p>{{equipo.GF}}</p>
+        <p>{{equipo.GC}}</p>
+        <p>{{equipo.DG}}</p>
+        <p>{{equipo.PTS}}</p>
+        </div>
+        {%endfor%}
+        </div>
+        </section>
+{% endblock %}

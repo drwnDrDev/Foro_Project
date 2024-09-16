@@ -12,4 +12,9 @@ urlpatterns = [
     path('threads/1',views.threads_show, name='threads_show'),
     path('threads/1/reply',views.threads_reply, name='threads_reply'),
     path('politica_de_datos',views.politica_de_datos, name='politica_de_datos'),
+    path('contact/', views.contact, name='contact'),
+    path('about/', views.about, name='about'),
+    path('', views.home, name='home'),
+    path('votes/', views.votes, name='votes'),
+   
 ]
