@@ -316,13 +316,69 @@ margin-bottom: -1.5rem;
     outline-style: dotted;
     outline-color: red;
 }
+.tabla {
+    width: 98%;
+    margin: auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 2fr; 
+    padding: 0.5rem;
+    border-radius: .25rem;
+    background-color: rgba(100, 100, 100, 0.2);
+}
+.tabla > p {
+    padding:0;
+    margin: 0;
+}
+.bg__cuerpo--tabla {
+    background-color: rgba(132, 130, 130, 0.2);
+   
+}
+
+.club{
+    font-weight: 600;
+    text-align: left;    
+}
+.puntos{
+    font-weight: 600;
+    background-color: rgba(228, 227, 227, 0.2);
+    font-size: 106%;
+}
+.color--red{
+    color: red;
+    font-weight: 600;
+}
+.color--green{
+    color: green;
+    font-weight: 600;
+}
+.color--green::before{
+    content: "+";
+}
 
 @media (min-width: 640px){
+
+.tabla {
+    width: 36rem;
+
+}
+
+.bg__cuerpo--tabla:hover {
+    background-color:rgba(228, 227, 227, 0.2);
+    float: center;
+    width:37rem;
+    justify-content: space-around;
+}
 .row {
     grid-template-columns:4fr 2fr 1fr;
 }
 .titulo {
     grid-column:1/ span 1;
+}
+.bg__cabecera--tabla {
+    background-color: rgba(30, 1, 32, 0.8);
+    color: whitesmoke;
+    font-weight: 600;
 }
 .cabecera{
     font-weight: 600;
