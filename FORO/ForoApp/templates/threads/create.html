@@ -1,0 +1,14 @@
+{% extends 'layouts/app.html'%}
+{% block title %}New Theread{% endblock %}
+{% block description %}crear nuevos hilos cono tematicas diversas y respetando las reglas de la comunidad{% endblock %}
+{% block content %}
+<form action="" method="post" class="form__create">
+    {% csrf_token %}
+    <input type="hidden" name="user" value="{{user}}">
+     <label class="create__label" for="title">Título del tema</label>
+     <input class="textarea" type="textarea" name="title" id="title" rows="5" cols="33">
+     <div class="create__buttom">
+     <button class="button-primary" type="submit" title="enviar nuevo hilo">Enviar</button>
+    </div>
+</form>
+{% endblock %}

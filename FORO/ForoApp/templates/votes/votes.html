@@ -1,0 +1,48 @@
+{% extends "layouts/app.html" %}
+{% block title %}Votos{% endblock %}
+{% block content %}
+        <section>
+        <h2>Vota por tu categoria favorita</h2>
+
+        {% comment %} <form method="POST" action="{% url 'votes:store' %}">
+            {% csrf_token %}
+            <div class="form-group">
+                        <label for="category">Categoria</label>
+                        <select name="category" id="category">
+                        <option value="1">Programacion</option>
+                        <option value="2">Diseño</option>
+                        <option value="3">Marketing</option>
+                        <option value="4">Desarrollo personal</option>
+                        </select>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="button-primary">Votar</button>
+                </div>
+        </form> {% endcomment %}
+        <div class="tabla bg__cabecera--tabla">
+            <p>Equipo</p>
+            <p>PJ</p>
+            <p>PG</p>
+            <p>PE</p>
+            <p>PP</p>
+            <p>GF</p>
+            <p>GC</p>
+            <p>DG</p>
+            <p>Pts</p>
+            </div>
+        {%for equipo in data%}
+        <div class="tabla bg__cuerpo--tabla">
+        <p class="club">{{equipo.club}}</p>
+        <p>{{equipo.PJ}}</p>
+        <p>{{equipo.GTriunfos}}</p>
+        <p>{{equipo.EEmpates}}</p>
+        <p>{{equipo.PDerrotas}}</p>
+        <p>{{equipo.GF}}</p>
+        <p>{{equipo.GC}}</p>
+        <p class={% if equipo.DG < 0 %}color--red {% else %} color--green {% endif %}>{{equipo.DG}}</p>
+        <p class="puntos">{{equipo.PtsPuntos}}</p>
+        </div>
+        {%endfor%}
+        </div>
+        </section>
+{% endblock %}

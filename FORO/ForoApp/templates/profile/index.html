@@ -1,0 +1,28 @@
+{% extends 'layouts/app.html'%}
+{% block title %}Mi perfil{% endblock %}
+{% block description %}Datos sobre la interacción de usuario con la aplcacíon{% endblock %}
+{% block content %}
+<section class="flex">
+
+    <div class="profile">
+        <p class="profile__p">Nombre de usuario: {{user.username}}</p>
+        <p class="profile__p">Correo: {{user.email}}</p>
+        <p class="profile__p">Fecha de creación: {{user.create_at}}</p>
+        <p class="profile__p">Número de hilos creados: {{threads}}</p>
+        <p class="profile__p">Número de comentarios: {{posts}}</p>
+    </div>
+    <div class="profile__div">
+        <a href="/threads" class="button-primary">Ver hilos</a>
+        <a href="/votes" class="button-primary">Ver votos</a>
+    </div>
+</section>
+<aside class="historia">
+    <h3>Últimos hilos</h3>
+  
+        {% for thread in threads %}
+        <a href="/threads/{{thread.id}}">{{thread.title}}</a>
+        {% endfor %}
+  
+</aside>
+
+{%endblock%}

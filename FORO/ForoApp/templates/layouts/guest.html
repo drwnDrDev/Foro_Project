@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang ='es'>
 <head>
-    <meta charset="utf-8">
-    
+    <meta charset="utf-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{% block description %}  {% endblock %}">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'home/style.css' %}">  
-    <title>{% block title%}   {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">  
+    <link rel="stylesheet" href="{% static 'css/guest.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/dc.png' %}" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+<title>{% block title%}{% endblock %}</title>
 </head>
 <body>
     <header>
-    <h1>Thereads APP</h1>
+    <h1 class="header__brand">Thereads APP</h1>
     <nav>
         <ul>
             <li><a href="/">Inicio</a></li>
-            <li><a href="/about">Acerca de</a></li>
             <li><a href="/contact">Contacto</a></li>
         </ul>   
     </nav>
+    <span class="icon i-open" id="btn-open">
+    </span>
+    <div class="pop-up menu" id="menu">
+        <ul class="pop-up__list">
+           <li class="pop-up__list--item"><a href="/profile/new"><i class="icon i-register"></i>registrarme</a></li>
+           <li class="pop-up__list--item"><a href="/threads"><i class="icon i-sesion"></i>iniciar sesion</a></li>
+           <li class="pop-up__list--item"><a href="#"><i class="icon i-close"></i>cerrar sesion</a></li>
+           <li class="pop-up__list--item"><a href="#"><i class="icon"></i>salir</a></li>
+        </ul>
+    </div>
     </header>
   
         {% block content %}
 
         {% endblock %}
+        <script src="{% static 'js/guest.js' %}" type="text/javascript"></script>
     </body>
 </html>

@@ -1,0 +1,42 @@
+{% extends 'layouts/app.html'%}
+{% block title %} Discusión {% endblock %}
+{% block description %} {{thread.title}}  {% endblock %}
+{% block content %}
+<section  class="thread">
+    <h2 class="thread__h2">{{thread.title}}</h2>
+    <div class="thread__div">
+        <p class="thread__div--p nombre">Nombre del usuario{{ thread.user}}</p>
+        <p class="thread__div--p fecha"> <i class="icon i-time"></i>  {{thread.create_at}}</p>
+    </div>
+</section>
+    
+
+<main>
+
+    {% for post in posts %}
+<div class="post">
+    <p class="post__p nombre"><i class="icon i-user"></i> nobre de usuario {{post.user}}</p>
+    <p class="post__p fecha">
+        <b class="icon i-time"></b><i>{{post.create_at}}</i>
+    </p> 
+    <p class="post__p content">
+        {{post.content}}
+    </p>
+    <p class="post_p votes">
+       <b>{{confirmos}}</b>
+       <a href=""  class="post__p--a confirmo" >     
+        <b class="icon i-like"></b>
+        <i>confirmo</i> </a>
+    </p>
+    <p class="post_p votes" >
+     <b>{{nomepareces}}</b>
+     <a href=""  class="post__p--a no-me-parece" >
+        <b class="icon i-unlike"></b><i>no me parece</i> </a>
+    </p>
+</div>
+{% endfor%}
+
+
+{% endblock %}
+
+</main>

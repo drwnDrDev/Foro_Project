@@ -1,0 +1,27 @@
+{% extends 'layouts/app.html'%}
+{% block title %}Hilos{% endblock %}
+{% block description %}Conversaciones interesantes sobre casi todos los temas{% endblock %}
+{% block content %}
+<section>
+    <div class="cabecera">
+        <p class="cabecera__titulo">
+           Título del tema a tratar
+        </p>
+        <p>
+            fecha de creación
+        </p>
+        <p>Nombre</p>
+    </div>
+{% for theread in data %}
+<a class="row" href="{{theread.id}}">
+    <p class="row__p titulo">
+        {{theread.title}}
+    </p>
+    <p class="row__p nombre">Nombre del usuario{{ theread.user}}</p>
+    <p class="row__p fecha">
+     <i class="icon i-time"></i>  {{theread.create_at}}
+    </p>
+</a>  
+{% endfor %}  
+</section>
+{% endblock %}

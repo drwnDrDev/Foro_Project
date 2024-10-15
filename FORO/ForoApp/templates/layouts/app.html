@@ -1,27 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% block description %} {% endblock %}">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'home/app.css' %}">  
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/app.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/dc.png' %}" type="image/png">  
     <title>Thereads APP</title>
 </head>
 <body>
     <header>
-    <h1>Threads APP</h1>
+    <h1 class="header__brand">Threads APP</h1>
     <nav>
         <ul>
-            <li><a href="/threads">Inicio</a></li>
-            <li><a href="/tags">Etiquetas</a></li>
-            <li><a href="/categories">Categorias</a></li>
-            <li><a href="/votes">Lo más votado</a></li>
+            <li><a href="/threads"><i class="icon i-home" aria-label="Home"></i> Home</a></li>
+            <li ><a href="/profile/1"><i class="icon i-user" aria-label="user"></i>Mi perfil</a></li>
+            <li ><a href="/votes"><i class="icon i-show" aria-label="show"></i>Popular</a></li>
         </ul>   
     </nav>
+    <form class='search__form'>
+        <input type="text" class="input__text-buscar" name="search" placeholder="Buscar">
+        <button type="submit" class="button-primary">Buscar</button>
+    </form>
     </header>
-    <main>
+    <h1>{% block title %} {% endblock %}</h1>
+   
         {% block content %}
 
         {% endblock %}
+
+    <footer>    
+        <p>Desarrolladores <a href="https://github.com/drwnDrDev">Darwin Diaz</a><a href="https://github.com/FotoAleph">Carlos ramirez</a></p>  
+    </footer>
     </body>
 </html>

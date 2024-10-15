@@ -15,16 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from categories.views import categories
-from home.views import *
-from users.views import *
-from votes.views import *
-from threads.views import *
-from tags.views import *
+from django.urls import include, path
 from django.contrib.auth.views import LoginView, LogoutView
 from django.conf import settings
 from django.conf.urls.static import static
+from ForoApp.views import *
 
 
 urlpatterns = [
@@ -32,14 +27,8 @@ urlpatterns = [
     path('contact', contact),
     path('about', about),
     path('admin/', admin.site.urls),
-    path('categories/', categories),
     path('login/', LoginView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
-    path('votes/', votes, name='vote'),
-    path('tags/', tags, name='tags'),
-  
-    path('threads/', threads, name='threads'),
-    path('thread/<int:id>/', thread, name='thread'),
-
+    path('', include('ForoApp.urls')),
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
